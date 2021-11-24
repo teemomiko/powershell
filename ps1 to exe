@@ -1,6 +1,9 @@
 代码实现功能：将已经实现功能的PS脚本封装为可执行文件exe。 安全性以及 便捷性得到提升。
 实现代码：
 
+3ks for  Avatar
+Aravind V
+
 
 param([string]$inputFile=$null, [string]$outputFile=$null, [switch]$verbose, [switch] $debug, [switch]$runtime20, [switch]$x86, [switch]$x64, [switch]$runtime30, [switch]$runtime40, [switch]$runtime50, [int]$lcid, [switch]$sta, [switch]$mta, [switch]$noConsole, [switch]$nested, [string]$iconFile=$null)
 
