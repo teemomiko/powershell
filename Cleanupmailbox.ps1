@@ -3,8 +3,8 @@ Ver:1.0
 Author: Aoteman
 
 '''
-$userid='it_infor@cootek.cn'
-$pass= get-content C:\Users\teemo\Desktop\inforcootek.txt| convertto-securestring
+$userid='*****@cootek.cn'
+$pass= get-content C:\Users\****\Desktop\inforcootek.txt| convertto-securestring
 $cred1 = New-Object System.Management.Automation.PSCredential($userid,$pass)
 $cred = Get-Credential $cred1
 # Connect-MSolService -credential $cred  
@@ -69,7 +69,7 @@ foreach ($queue in $queues)
           }
 
     }
-# 显示结果
+# result to csv 
 
 
 
