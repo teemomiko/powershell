@@ -1,13 +1,14 @@
 $minidumpPath = "$env:SystemRoot\Minidump"
 $currentDate = Get-Date -Format "MM-dd-yyyy"
 
-
 $infoDict = @{
  "User_Name" = $env:USERNAME
  "PC_Name" = $env:computername
  "OS" = (Get-WmiObject -Class Win32_OperatingSystem).Caption
  "Time" = $currentDate
 }
+
+
 function Add-SqlData {
     param (
       [Parameter(Mandatory=$true)]
@@ -33,6 +34,7 @@ function Add-SqlData {
     return $result
   }
 
+
 if(Test-Path $minidumpPath){
     $files = Get-ChildItem $minidumpPath
     $fileCount = $files.Count
@@ -43,5 +45,4 @@ if(Test-Path $minidumpPath){
     Write-Output "Latest file: $($latestFile.Name)"
 }
 
-
-Write-Output $infoDict.User_Name,$infoDict.PC_Name
+#Write-Output $infoDict.User_Name,$infoDict.PC_Name
